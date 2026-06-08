@@ -4,7 +4,7 @@ import {
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
-import atomoLogo from "@/assets/atomo-logo.png";
+import atomoHeaderLogo from "@/assets/atomoheaderlogo.png";
 import {
   Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel,
   SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarHeader, SidebarFooter, useSidebar,
@@ -66,7 +66,11 @@ const AppSidebar = () => {
     <Sidebar collapsible="icon" className="border-r border-border/30">
       <SidebarHeader className="p-4">
         <div className="flex items-center gap-3">
-          <img src={atomoLogo} alt="Atomo Innovations" className="h-8 w-8" />
+          <img
+            src={atomoHeaderLogo}
+            alt="Atomo"
+            className={`object-contain shrink-0 ${collapsed ? "h-8 w-8" : "h-10 w-10"}`}
+          />
           {!collapsed && (
             <div>
               <p className="text-sm font-bold tracking-wide">ATOMO</p>
